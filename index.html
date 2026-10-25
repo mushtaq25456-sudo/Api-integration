@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreHub - Curated Marketplace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header class="top-header">
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <span class="brand-title">StoreHub</span>
+            </div>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-pill-btn">
+                    <span class="theme-icon">☀️</span>
+                    <span>Theme</span>
+                </button>
+                <button class="icon-btn" aria-label="Quick Actions">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+                </button>
+                <button class="add-product-btn">+ Add product</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <main class="main-content">
+            <!-- Hero + search -->
+            <section class="hero-section">
+                <h1 class="hero-title">Find your next<br>favorite.</h1>
+                <p class="hero-sub">Fresh picks from the categories people are loving this week.</p>
+
+                <div class="search-box">
+                    <span class="search-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                    </span>
+                    <input type="text" id="searchInput" placeholder="Search by title or category..." aria-label="Search products">
+                </div>
+            </section>
+
+            <!-- Loading & Error -->
+            <div id="loading">Loading products...</div>
+            <div id="error"></div>
+
+            <!-- Product Cards Container -->
+            <div id="productContainer" class="products"></div>
+
+            <!-- Sliding Pagination -->
+            <div id="pagination" class="pagination"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
